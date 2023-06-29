@@ -68,6 +68,6 @@ jobs:
         
     - name: Publish to GitHub Packages
       run: mvn --batch-mode deploy
-      env:
-          GITHUB_TOKEN: ${{ secrets.secret1 }}
+#       env:
+#           GITHUB_TOKEN: ${{ secrets.secret1 }}
 
