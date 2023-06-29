@@ -69,6 +69,6 @@ jobs:
     - name: Publish to GitHub Packages
       run: mvn deploy --file pom.xml --settings ${{ github.workspace }}/.m2/settings.xml
       env:
-         USERNAME: ${{ github.actor }}
-         PASSWORD: ${{ secrets.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 }}
+     
+         GITHUB_TOKEN: ${{ secrets.java_token }}
 
