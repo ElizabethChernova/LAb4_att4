@@ -67,7 +67,7 @@ jobs:
         
       
     - name: Publish to GitHub Packages
-      run: mvn deploy --batch -mode deploy
+      run: mvn deploy --batch-mode deploy
       env:
      
          GITHUB_TOKEN: ${{ secrets.java_token }}
