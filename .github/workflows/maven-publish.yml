@@ -53,6 +53,12 @@ jobs:
       
     - name: Package JAR
       run: mvn package --file pom.xml
+    
+    - name: Upload JAR
+      uses: actions/upload-artifact@v2
+      with:
+        name: jar-file
+        path: target/*.jar
 #     - name: Publish to GitHub Packages Apache Maven
 #       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
 #       env:
