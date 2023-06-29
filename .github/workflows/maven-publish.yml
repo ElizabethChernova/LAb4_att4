@@ -65,7 +65,7 @@ jobs:
         name: jar-file
         path: target/*.jar
         
-      
+    
     - name: Publish to GitHub Packages
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
