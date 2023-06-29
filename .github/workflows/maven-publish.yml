@@ -41,7 +41,8 @@ jobs:
         
     - name: Run Junit tests
       run: mvn test --file pom.xml
- 
+    - name: Package JAR
+      run: mvn package --file pom.xml
 #     - name: Publish to GitHub Packages Apache Maven
 #       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
 #       env:
