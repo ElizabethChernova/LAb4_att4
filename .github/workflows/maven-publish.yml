@@ -41,6 +41,16 @@ jobs:
         
     - name: Run Junit tests
       run: mvn test --file pom.xml
+    - name: Generate Test Report
+      run: mvn surefire-report:report --file pom.xml
+
+    - name: Upload Test Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-report
+        path: target/site/surefire-report.html
+      
+      
     - name: Package JAR
       run: mvn package --file pom.xml
 #     - name: Publish to GitHub Packages Apache Maven
