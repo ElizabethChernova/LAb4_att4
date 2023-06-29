@@ -29,8 +29,7 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Run Junit tests
-      run: mvn test --file pom.xml
+
     - name: Run Checkstyle
       run: mvn checkstyle:checkstyle
 
@@ -40,6 +39,8 @@ jobs:
         name: checkstyle-results
         path: target/site/checkstyle.html
         
+    - name: Run Junit tests
+      run: mvn test --file pom.xml
  
 #     - name: Publish to GitHub Packages Apache Maven
 #       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
