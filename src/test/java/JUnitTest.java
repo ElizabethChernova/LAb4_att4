@@ -17,7 +17,7 @@ public class JUnitTest {
     @Tag("grade")
     @Test
     public void minGrade() {
-        StudentGradesSystem st1 = new StudentGradesSystem(100,60,90,80,54 );
+        StudentGradesSystem  st1 = new StudentGradesSystem(100,60,90,80,54 );
         int result = st1.findMin();
         //assertion
         assertThat(result).isEqualTo(54);
