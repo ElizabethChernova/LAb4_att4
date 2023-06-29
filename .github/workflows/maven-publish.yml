@@ -64,7 +64,10 @@ jobs:
       with:
         name: jar-file
         path: target/*.jar
+        
+        
     - name: Publish to GitHub Packages
       run: mvn deploy --file pom.xml
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       USERNAME: ${{ github.actor }}
+       PASSWORD: ${{ secrets.SECRET1 }}
