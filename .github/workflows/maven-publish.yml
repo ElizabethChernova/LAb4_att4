@@ -67,7 +67,7 @@ jobs:
         
         
     - name: Publish to GitHub Packages
-      run: mvn deploy --file pom.xml
+      run: mvn --batch-mode deploy
       env:
-       USERNAME: ${{ github.actor }}
-       PASSWORD: ${{ secrets.SECRET1 }}
+          GITHUB_TOKEN: ${{ secrets.Secret1 }}
+
