@@ -36,7 +36,7 @@ public class JUnitTest {
 //    }
 @Tag("grade")
     @ParameterizedTest
-    @CsvSource({ "100, yes", " 4, no", "69, no", "90, yes" }) // Input and expected output pairs
+    @CsvSource({ "100, yes", " 4, no", "69, no", "96, no" }) // Input and expected output pairs
     public void isTHisMaxGrade(int num1, String expectedAnswer) {
            StudentGradesSystem st1 = new StudentGradesSystem(100,60,90,80,54 );
 
