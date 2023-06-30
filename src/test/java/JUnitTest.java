@@ -57,4 +57,5 @@ public Stream<DynamicTest> isStudentPass() {
                 assertTrue(grade >= 61);
             }));
 }
+
 }
